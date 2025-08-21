@@ -3,14 +3,14 @@ import pandas as pd
 import streamlit as st
 
 # Streamlit UI
-st.title("Bank Loan Prediction")
+st.title("Bank Loan Prediction (for small amounts of loan $0-50,000)")
 
 #User Inputs
 Age = st.number_input("What is the applicant's age?",min_value=18, max_value=100, step=1)
 Gender =  st.selectbox("What is the applicant's gender?",["male","female"])
 Education = st.selectbox("What is the applicant's education level?",["High school","Associate","Bachelor","Master","Doctorate"])
 Income = st.number_input("What is the applicant's annual income?",min_value=0, step=100)
-Experience = st.number_input("What is the applicant's years of experience?",min_value=0, step=1)
+Experience = st.number_input("What is the applicant's years of experience?",min_value=0, max_value=50000, step=1)
 Ownership = st.selectbox("Does the applicant own, rent, have a mortgage or other? ",["RENT","OWN","MORTGAGE","OTHER"])
 Loan_Amount = st.number_input("What is the amount of loan the applicant want?",min_value=0, step=100)
 Loan_Intent = st.selectbox("What is the applicant's loan intent?",['PERSONAL', 'EDUCATION', 'MEDICAL', 'VENTURE', 'HOMEIMPROVEMENT', 'DEBTCONSOLIDATION'])
