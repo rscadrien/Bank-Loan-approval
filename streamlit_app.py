@@ -17,7 +17,7 @@ Loan_Intent = st.selectbox("What is the applicant's loan intent?",['PERSONAL', '
 Int_rate = st.number_input("What is the interest rate?",min_value=0.0, max_value=100.0, step=0.1)
 Credit_history = st.number_input("What is the length of the applicant's credit history in years?",min_value=0, step=1)
 Credit_score = st.number_input("What is the applicant's credit score?",min_value=300, max_value=850, step=1)
-Loan_default = st.selectbox("Does the applicant have any loan default? ",["No","Yes"])
+Loan_default = st.selectbox("Does the applicant have a clean loan history (no default)? ",["No","Yes"])
 
 if st.button("Predict Loan Approval Probability"):
     # Create a dataframe with the input

@@ -14,7 +14,7 @@ Loan_Intent = get_valid_input_str("What is the applicant's loan intent? ",['PERS
 Int_rate = get_valid_input_float("What is the interest rate? ",0,100)
 Credit_history = get_valid_input_float("What is the length of the applicant's credit history in years? ",0,50)
 Credit_score = get_valid_input_int("What is the applicant's credit score? ",300,850)
-Loan_default = get_valid_input_str("Does the applicant have any loan default? ",["No","Yes"])
+Loan_default = get_valid_input_str("Does the applicant have a clean loan history (no default)?",["No","Yes"])
 
 #Create a dataframe with the input
 X = pd.DataFrame([{
