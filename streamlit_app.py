@@ -4,6 +4,8 @@ import streamlit as st
 
 # Streamlit UI
 st.title("Bank Loan Prediction (for small amounts of loan $0-50,000)")
+st.write("This app predicts the probability of a bank loan being approved based on applicant information.")
+st.write("Please note that this model was trained on synthetic data. Be cautious when interpreting the results.")
 
 #User Inputs
 Age = st.number_input("What is the applicant's age?",min_value=18, max_value=100, step=1)
