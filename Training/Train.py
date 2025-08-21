@@ -7,7 +7,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
 from sklearn.metrics import accuracy_score, roc_auc_score, ConfusionMatrixDisplay
 
@@ -40,8 +40,8 @@ preprocessor = ColumnTransformer(
     ]
 )
 
-#Define the Random Forest model
-model= RandomForestClassifier(n_estimators=100,class_weight='balanced')
+#Define the model
+model= LogisticRegression(class_weight='balanced')
 
 #Create the full pipeline
 full_pipeline = Pipeline(steps=[
